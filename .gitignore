@@ -1,0 +1,3 @@
+lighttpd/lighttpd.access.log
+lighttpd/lighttpd.error.log
+lighttpd/php5.*
