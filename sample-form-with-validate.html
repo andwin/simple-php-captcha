@@ -12,6 +12,11 @@
     <style>
       label {
         width: 100px;
+        font-weight: normal;
+      }
+      label.error {
+        width: 100%;
+        color: #A00;
       }
       input, textarea {
         width: 300px;
@@ -43,8 +48,8 @@
             </div>
 
             <div class="fieldgroup">
-                <label for="message">Message</label>
-                <textarea id="message"></textarea>
+                <label for="message1">Message</label>
+                <textarea name="message"></textarea>
             </div>
 
             <div class="fieldgroup">
@@ -58,8 +63,41 @@
 
     </div>
 
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.3.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function (){
+        $("#contact-form").validate({
+          rules: {
+            name: {
+              required: true,
+              minlength: 5
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            message: {
+              required: true,
+              minlength: 10
+            }
+          },
+          messages: {
+            name: {
+              required: "Please enter your name"
+            },
+            email: {
+              required: "Please enter your e-mail address",
+              minlength: "Please enter a valid email address"
+            },
+            message: {
+              required: "Please enter your message"
+            }
+
+          }
+        });
+      });
+    </script>
   </body>
 </html>
-
