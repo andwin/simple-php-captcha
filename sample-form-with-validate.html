@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple PHP Captcha Test Form With jQuery Validate</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <style>
+      label {
+        width: 100px;
+      }
+      input, textarea {
+        width: 300px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Simple PHP Captcha</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Form with jQuery Validate</h1>
+        <form id="contact-form">
+          <fieldset>
+
+            <div class="fieldgroup">
+                <label for="firstname">Name</label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="fieldgroup">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+
+            <div class="fieldgroup">
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+            </div>
+
+            <div class="fieldgroup">
+                <button type="submit" class="btn btn-lg btn-success">Send</button>
+            </div>
+
+        </fieldset>
+
+        </form>
+      </div>
+
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.3.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+  </body>
+</html>
+
