@@ -29,6 +29,9 @@
       #captcha-wrapper {
         margin-bottom: 10px;
       }
+      #refresh-captcha {
+        cursor: pointer;
+      }
     </style>
 
   </head>
@@ -127,6 +130,11 @@
               remote: "Enter the correct text"
             }
           }
+        });
+
+        $('#refresh-captcha').click(function(){
+          $('#captcha-image').attr('src', 'generate-captcha.php?r=' + Math.random());
+          return false;
         });
       });
     </script>
