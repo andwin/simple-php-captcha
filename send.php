@@ -1,3 +1,7 @@
+<?php
+include 'functions.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,10 +22,7 @@
       </div>
 
       <?php
-
-      session_start();
-
-      if (isset($_REQUEST['captcha']) && isset($_SESSION['captcha']) && strtoupper($_REQUEST['captcha']) == strtoupper($_SESSION['captcha'])) {
+      if (isCaptchaValid()) {
         echo '<p>Captcha valid!</p>';
       } else {
         echo '<p>Captcha invalid!</p>';
