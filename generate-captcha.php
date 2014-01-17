@@ -1,5 +1,5 @@
 <?php
-
+include 'functions.php';
 session_start();
 
 $captcha = generateCaptchaString();
@@ -27,17 +27,3 @@ imagettftext($image, $fontSize, $angle, $x, $y, $fontColor, $fontPath, $captcha)
 
 header("Content-type: image/png");
 imagepng($image);
-
-function generateCaptchaString($length = 5) {
-  return strtoupper(substr(md5(rand()), 0, $length));
-}
-
-function getFontPath() {
-  $files = glob('fonts/*.ttf');
-  $file = array_rand($files);
-  return $files[$file];
-}
-
-function getFontColor($image) {
-  return imagecolorallocate($image, 0x00, 0x66, 0x99);
-}
