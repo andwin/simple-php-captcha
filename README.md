@@ -61,3 +61,28 @@ $('#refresh-captcha').click(function(){
 ```
 
 Have a look at [sample-form-with-validate.html](https://github.com/andwin/simple-php-captcha/blob/master/sample-form-with-validate.html)
+
+### To validate the captcha on the backend
+
+First include functions.php and call session_start();
+
+```php
+<?php
+include 'functions.php';
+session_start();
+?>
+```
+
+Call the function isCaptchaValid() to find out if the correct captcha text was entered.
+
+```php
+<?php
+if (isCaptchaValid()) {
+  echo '<p>Captcha valid!</p>';
+} else {
+  echo '<p>Captcha invalid!</p>';
+}
+?>
+```
+
+**Make sure to update all the paths / URLs to `generate-captcha.php`, `verify-captcha.php` and `functions.php`**
