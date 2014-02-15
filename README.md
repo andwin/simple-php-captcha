@@ -96,3 +96,11 @@ On Ubuntu, run `sudo apt-get install lighttpd php-cgi php5-gd php5-json` to inst
 Start lighttpd with `lighttpd -f lighttpd/lighttpd.conf`
 
 You should now be able to see the sample form at: [http://localhost:8000/sample-form-with-validate.html](http://localhost:8000/sample-form-with-validate.html)
+
+## Screenshots
+
+![Screenshot of wron captcha text](img/screenshot-wrong-text.png)  
+*Screenshot of wron captcha text*
+
+![Screenshot of correct captcha text](img/screenshot-correct-text.png)  
+*Screenshot of correct captcha text*
