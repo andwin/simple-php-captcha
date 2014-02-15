@@ -86,3 +86,13 @@ if (isCaptchaValid()) {
 ```
 
 **Make sure to update all the paths / URLs to `generate-captcha.php`, `verify-captcha.php` and `functions.php`**
+
+### Running the sample code
+
+If you want to run the sample files with [Lighttpd](http://www.lighttpd.net/) and use the config file in `lighttpd/lighttpd.config` make sure you have Lighttpd and PHP installed. And make sure the bin-path to php-cgi is correct.
+
+On Ubuntu, run `sudo apt-get install lighttpd php-cgi php5-gd php5-json` to install everything you need and set the bin path to `/usr/bin/php-cgi`.
+
+Start lighttpd with `lighttpd -f lighttpd/lighttpd.conf`
+
+You should now be able to see the sample form at: [http://localhost:8000/sample-form-with-validate.html](http://localhost:8000/sample-form-with-validate.html)
